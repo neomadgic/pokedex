@@ -1,8 +1,8 @@
 //
-//  File.swift
+//  Pokemon.swift
 //  pokedex
 //
-//  Created by Vu Dang on 3/4/16.
+//  Created by Vu Dang on 3/8/16.
 //  Copyright © 2016 Vu Dang. All rights reserved.
 //
 
