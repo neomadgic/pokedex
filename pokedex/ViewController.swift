@@ -13,19 +13,47 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     @IBOutlet weak var collection: UICollectionView!
     
+    var pokemon = [Pokemon]()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         collection.delegate = self
         collection.dataSource = self
+        
+        parsePokemonCSV()
+    }
+    
+    func parsePokemonCSV()
+    {
+        let path = NSBundle.mainBundle().pathForResource("pokemon", ofType: "csv")!
+        
+        do
+            {
+                let csv = try CSV(contentsOfURL: path)
+                let rows = csv.rows
+                
+                for rows in rows
+                {
+                    let pokeId = Int(rows["id"]!)!
+                    let name = rows["identifier"]!
+                    
+                    let poke = Pokemon(name: name, pokedexId: pokeId)
+                    pokemon.append(poke)
+                }
+            }
+        catch let err as NSError
+            {
+                print(err.debugDescription)
+            }
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         if let cell = collection.dequeueReusableCellWithReuseIdentifier("PokeCell", forIndexPath: indexPath) as? PokeCell
             {
-                let pokemon = Pokemon(name: "test", pokedexId: indexPath.row + 1)
-                cell.configureCell(pokemon)
+                let poke = pokemon[indexPath.row]
+                cell.configureCell(poke)
                 
                 return cell
             }
@@ -42,7 +70,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return 718
+        return pokemon.count
     }
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
