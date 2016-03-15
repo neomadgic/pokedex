@@ -16,6 +16,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var pokemon = [Pokemon]()
     var musicPlayer: AVAudioPlayer!
+    var randMusic: AVAudioPlayer!
     
     override func viewDidLoad()
     {
@@ -24,7 +25,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         collection.dataSource = self
         
         initAudio()
+        randomizeMusic()
+        
         parsePokemonCSV()
+    }
+    
+    func randomizeMusic()
+    {
+        let randNum = Int(arc4random_uniform(4)) + 1
+        let path = NSBundle.mainBundle().pathForResource("music\(randNum)", ofType: "mp3")!
+        
+        do
+        {
+            randMusic = try AVAudioPlayer(contentsOfURL: NSURL(string: path)!)
+            randMusic.prepareToPlay()
+            randMusic.numberOfLoops = -1
+        }
+        catch let err as NSError
+        {
+            print(err.debugDescription);
+        }
     }
     
     func initAudio()
@@ -109,6 +129,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             {
                 musicPlayer.stop()
                 sender.alpha = 0.5;
+                randomizeMusic()
+                musicPlayer = randMusic;
             }
         else
             {
