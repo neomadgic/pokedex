@@ -27,16 +27,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0yj-qD-dbj">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="55"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5U-ve-m43">
-                                        <rect key="frame" x="216" y="4" width="169" height="47"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="169" id="7zO-eB-zDD"/>
-                                            <constraint firstAttribute="height" constant="47" id="JlT-XP-IOa"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="32"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4O5-Dq-jIM">
                                         <rect key="frame" x="562" y="17" width="30" height="30"/>
                                         <constraints>
@@ -48,13 +38,23 @@
                                             <action selector="musicBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b42-uy-fLy"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokedex" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5U-ve-m43">
+                                        <rect key="frame" x="216" y="21" width="169" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="bdc-fm-zUT"/>
+                                            <constraint firstAttribute="width" constant="169" id="rrZ-FJ-Txk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.34509803921568627" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="1oV-kj-hzU"/>
+                                    <constraint firstItem="L5U-ve-m43" firstAttribute="centerX" secondItem="0yj-qD-dbj" secondAttribute="centerX" id="7un-Qj-kug"/>
                                     <constraint firstItem="4O5-Dq-jIM" firstAttribute="top" secondItem="0yj-qD-dbj" secondAttribute="top" constant="17" id="IaP-2c-rzR"/>
-                                    <constraint firstItem="L5U-ve-m43" firstAttribute="centerY" secondItem="0yj-qD-dbj" secondAttribute="centerY" id="KtJ-fL-4vv"/>
-                                    <constraint firstItem="L5U-ve-m43" firstAttribute="centerX" secondItem="0yj-qD-dbj" secondAttribute="centerX" id="bl2-KU-0wN"/>
+                                    <constraint firstAttribute="bottom" secondItem="L5U-ve-m43" secondAttribute="bottom" id="Uj1-uS-d8K"/>
                                     <constraint firstAttribute="trailing" secondItem="4O5-Dq-jIM" secondAttribute="trailing" constant="8" id="tZV-3q-Mm8"/>
                                 </constraints>
                             </view>
