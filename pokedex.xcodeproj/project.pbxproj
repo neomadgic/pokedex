@@ -20,6 +20,7 @@
 		76F2D23D1C988E77002B3D1B /* music3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D23C1C988E77002B3D1B /* music3.mp3 */; settings = {ASSET_TAGS = (); }; };
 		76F2D23F1C988E80002B3D1B /* music4.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 76F2D23E1C988E80002B3D1B /* music4.mp3 */; settings = {ASSET_TAGS = (); }; };
 		76F6302E1C8FAC7200C709E9 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6302D1C8FAC7200C709E9 /* Pokemon.swift */; settings = {ASSET_TAGS = (); }; };
+		76F8F8FC1C9B2CA30012C055 /* pokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F8F8FB1C9B2CA30012C055 /* pokemonDetailVC.swift */; settings = {ASSET_TAGS = (); }; };
 		76F939B61C92257100B6DDF3 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F939B51C92257100B6DDF3 /* PokeCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		76F2D23C1C988E77002B3D1B /* music3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music3.mp3; sourceTree = "<group>"; };
 		76F2D23E1C988E80002B3D1B /* music4.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music4.mp3; sourceTree = "<group>"; };
 		76F6302D1C8FAC7200C709E9 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		76F8F8FB1C9B2CA30012C055 /* pokemonDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pokemonDetailVC.swift; sourceTree = "<group>"; };
 		76F939B51C92257100B6DDF3 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				761066E81C8A23BA00125F6B /* ViewController.swift */,
+				76F8F8FB1C9B2CA30012C055 /* pokemonDetailVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				76F939B61C92257100B6DDF3 /* PokeCell.swift in Sources */,
 				761066E91C8A23BA00125F6B /* ViewController.swift in Sources */,
 				761066E71C8A23BA00125F6B /* AppDelegate.swift in Sources */,
+				76F8F8FC1C9B2CA30012C055 /* pokemonDetailVC.swift in Sources */,
 				76F6302E1C8FAC7200C709E9 /* Pokemon.swift in Sources */,
 				766ED1811C93409B00DC2DF2 /* csv.swift in Sources */,
 			);

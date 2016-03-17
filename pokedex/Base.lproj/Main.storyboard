@@ -6,6 +6,7 @@
     <customFonts key="customFonts">
         <mutableArray key="pokemon.ttf">
             <string>PokemonSolidNormal</string>
+            <string>PokemonSolidNormal</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -135,11 +136,59 @@
                     <connections>
                         <outlet property="collection" destination="4Xa-YO-SiZ" id="Jys-tG-Un3"/>
                         <outlet property="searchBar" destination="pwt-CM-nkZ" id="afd-d3-Gfp"/>
+                        <segue destination="Idh-As-4PE" kind="show" identifier="pokemonDetailVC" id="t5G-Mh-Ofw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="428" y="399"/>
+        </scene>
+        <!--Pokemon DetailVC-->
+        <scene sceneID="a5O-0w-ylI">
+            <objects>
+                <viewController id="Idh-As-4PE" customClass="pokemonDetailVC" customModule="pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hle-92-A4C"/>
+                        <viewControllerLayoutGuide type="bottom" id="eMt-M8-gbK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="MO8-yr-MvL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Pokemon Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyr-ID-QJ5">
+                                <rect key="frame" x="180" y="329" width="250" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="DEf-7C-Iun"/>
+                                    <constraint firstAttribute="width" constant="250" id="OJz-RG-1Y1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="32"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tu-iy-GiS">
+                                <rect key="frame" x="180" y="71" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="SHD-Ml-bP6"/>
+                                    <constraint firstAttribute="height" constant="250" id="YD2-Cw-L38"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.39661624760000003" green="1" blue="0.58397832169999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hyr-ID-QJ5" firstAttribute="centerX" secondItem="MO8-yr-MvL" secondAttribute="centerX" id="GOW-nm-hJI"/>
+                            <constraint firstItem="0tu-iy-GiS" firstAttribute="top" secondItem="Hle-92-A4C" secondAttribute="bottom" constant="51" id="PZP-ou-MsQ"/>
+                            <constraint firstItem="0tu-iy-GiS" firstAttribute="centerX" secondItem="MO8-yr-MvL" secondAttribute="centerX" id="ci7-UZ-RL8"/>
+                            <constraint firstItem="Hyr-ID-QJ5" firstAttribute="top" secondItem="0tu-iy-GiS" secondAttribute="bottom" constant="8" id="fPr-71-U8T"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonImg" destination="0tu-iy-GiS" id="RQf-No-Y25"/>
+                        <outlet property="pokemonNameLbl" destination="Hyr-ID-QJ5" id="V1z-YD-oCY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a5H-TM-NU3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1156" y="399"/>
         </scene>
     </scenes>
     <resources>
