@@ -10,11 +10,8 @@ import UIKit
 
 class pokemonDetailVC: UIViewController
 {
-
-
-    @IBOutlet weak var pokemonImg: UIImageView!
-    @IBOutlet weak var pokemonNameLbl: UILabel!
     
+    @IBOutlet weak var pokemonNameLbl: UILabel!
     var pokemon: Pokemon!
     
     
@@ -22,9 +19,12 @@ class pokemonDetailVC: UIViewController
     {
         super.viewDidLoad()
         
-        pokemonImg.image = UIImage(named: "\(pokemon.pokedexId)")
-        pokemonNameLbl.text = pokemon.name
+        pokemonNameLbl.text = pokemon.name.capitalizedString
     }
 
+    @IBAction func backBtnPressed(sender: AnyObject)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
