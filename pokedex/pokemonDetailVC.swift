@@ -20,6 +20,7 @@ class pokemonDetailVC: UIViewController
     @IBOutlet weak var attackLbl: UILabel!
     @IBOutlet weak var weightLbl: UILabel!
     @IBOutlet weak var defenseLbl: UILabel!
+    @IBOutlet weak var evoLbl: UILabel!
     
     
     

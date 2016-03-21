@@ -209,26 +209,6 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWb-KY-ACk">
-                                <rect key="frame" x="0.0" y="426" width="600" height="37"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Evolution: Venasaur LVL 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-lC-09c">
-                                        <rect key="frame" x="22" y="4" width="557" height="29"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="29" id="xDO-fa-E1v"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstItem="Z3M-lC-09c" firstAttribute="centerX" secondItem="aWb-KY-ACk" secondAttribute="centerX" id="7Sf-f1-vbg"/>
-                                    <constraint firstItem="Z3M-lC-09c" firstAttribute="centerY" secondItem="aWb-KY-ACk" secondAttribute="centerY" id="cMo-gN-tQY"/>
-                                    <constraint firstAttribute="height" constant="37" id="hJY-5O-3kE"/>
-                                </constraints>
-                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="81k-wg-Ljz">
                                 <rect key="frame" x="20" y="71" width="560" height="318"/>
                                 <subviews>
@@ -342,7 +322,7 @@
                                                 <color key="textColor" red="0.52026120580000002" green="0.52026120580000002" blue="0.52026120580000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VNK-vQ-WTd">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Defense:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="VNK-vQ-WTd">
                                                 <rect key="frame" x="280" y="0.0" width="140" height="55"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="11"/>
                                                 <color key="textColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -362,6 +342,26 @@
                                     <constraint firstItem="n3x-R9-vs5" firstAttribute="height" secondItem="EO9-Io-Nw0" secondAttribute="height" id="jLm-wN-5TK"/>
                                 </constraints>
                             </stackView>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWb-KY-ACk">
+                                <rect key="frame" x="0.0" y="426" width="600" height="37"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Evolution: Venasaur LVL 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-lC-09c">
+                                        <rect key="frame" x="22" y="4" width="557" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="29" id="xDO-fa-E1v"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.34509803919999998" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Z3M-lC-09c" firstAttribute="centerX" secondItem="aWb-KY-ACk" secondAttribute="centerX" id="7Sf-f1-vbg"/>
+                                    <constraint firstItem="Z3M-lC-09c" firstAttribute="centerY" secondItem="aWb-KY-ACk" secondAttribute="centerY" id="cMo-gN-tQY"/>
+                                    <constraint firstAttribute="height" constant="37" id="hJY-5O-3kE"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -384,6 +384,7 @@
                         <outlet property="attackLbl" destination="Ueg-0C-fuG" id="qFk-46-vSF"/>
                         <outlet property="defenseLbl" destination="SxB-9T-cuO" id="MRJ-2a-eXH"/>
                         <outlet property="descriptionLbl" destination="Kaz-6d-PWY" id="l2h-fa-hef"/>
+                        <outlet property="evoLbl" destination="Z3M-lC-09c" id="ySk-PP-0uT"/>
                         <outlet property="heightLbl" destination="ahp-Bn-oTj" id="Q7S-Vb-NU0"/>
                         <outlet property="mainImg" destination="M4z-Xw-xdX" id="Rt7-dF-8JA"/>
                         <outlet property="pokedexLbl" destination="RCF-EE-zZm" id="IUn-Y6-HKb"/>
