@@ -12,6 +12,17 @@ class pokemonDetailVC: UIViewController
 {
     
     @IBOutlet weak var pokemonNameLbl: UILabel!
+    @IBOutlet weak var mainImg: UIImageView!
+    @IBOutlet weak var descriptionLbl: UILabel!
+    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var pokedexLbl: UILabel!
+    @IBOutlet weak var heightLbl: UILabel!
+    @IBOutlet weak var attackLbl: UILabel!
+    @IBOutlet weak var weightLbl: UILabel!
+    @IBOutlet weak var defenseLbl: UILabel!
+    
+    
+    
     var pokemon: Pokemon!
     
     
