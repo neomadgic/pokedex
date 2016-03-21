@@ -31,6 +31,8 @@ class pokemonDetailVC: UIViewController
         super.viewDidLoad()
         
         pokemonNameLbl.text = pokemon.name.capitalizedString
+        mainImg.image = UIImage(named: "\(pokemon.pokedexId)")
+        pokedexLbl.text = "\(pokemon.pokedexId)"
     }
 
     @IBAction func backBtnPressed(sender: AnyObject)
