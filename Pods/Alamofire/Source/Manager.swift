@@ -452,8 +452,6 @@ public class Manager {
                 delegate.URLSession(session, task: task, didCompleteWithError: error)
             }
 
-            NSNotificationCenter.defaultCenter().postNotificationName(Notifications.Task.DidComplete, object: task)
-
             self[task] = nil
         }
 

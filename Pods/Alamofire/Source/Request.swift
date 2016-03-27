@@ -48,9 +48,6 @@ public class Request {
     /// The progress of the request lifecycle.
     public var progress: NSProgress { return delegate.progress }
 
-    var startTime: CFAbsoluteTime?
-    var endTime: CFAbsoluteTime?
-
     // MARK: - Lifecycle
 
     init(session: NSURLSession, task: NSURLSessionTask) {
@@ -58,16 +55,14 @@ public class Request {
 
         switch task {
         case is NSURLSessionUploadTask:
-            delegate = UploadTaskDelegate(task: task)
+            self.delegate = UploadTaskDelegate(task: task)
         case is NSURLSessionDataTask:
-            delegate = DataTaskDelegate(task: task)
+            self.delegate = DataTaskDelegate(task: task)
         case is NSURLSessionDownloadTask:
-            delegate = DownloadTaskDelegate(task: task)
+            self.delegate = DownloadTaskDelegate(task: task)
         default:
-            delegate = TaskDelegate(task: task)
+            self.delegate = TaskDelegate(task: task)
         }
-
-        delegate.queue.addOperationWithBlock { self.endTime = CFAbsoluteTimeGetCurrent() }
     }
 
     // MARK: - Authentication
@@ -154,21 +149,17 @@ public class Request {
     // MARK: - State
 
     /**
-        Resumes the request.
-    */
-    public func resume() {
-        if startTime == nil { startTime = CFAbsoluteTimeGetCurrent() }
-
-        task.resume()
-        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.Task.DidResume, object: task)
-    }
-
-    /**
         Suspends the request.
     */
     public func suspend() {
         task.suspend()
-        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.Task.DidSuspend, object: task)
+    }
+
+    /**
+        Resumes the request.
+    */
+    public func resume() {
+        task.resume()
     }
 
     /**
@@ -185,8 +176,6 @@ public class Request {
         } else {
             task.cancel()
         }
-
-        NSNotificationCenter.defaultCenter().postNotificationName(Notifications.Task.DidCancel, object: task)
     }
 
     // MARK: - TaskDelegate
@@ -206,7 +195,6 @@ public class Request {
         var data: NSData? { return nil }
         var error: NSError?
 
-        var initialResponseTime: CFAbsoluteTime?
         var credential: NSURLCredential?
 
         init(task: NSURLSessionTask) {
@@ -393,8 +381,6 @@ public class Request {
         }
 
         func URLSession(session: NSURLSession, dataTask: NSURLSessionDataTask, didReceiveData data: NSData) {
-            if initialResponseTime == nil { initialResponseTime = CFAbsoluteTimeGetCurrent() }
-
             if let dataTaskDidReceiveData = dataTaskDidReceiveData {
                 dataTaskDidReceiveData(session, dataTask, data)
             } else {
