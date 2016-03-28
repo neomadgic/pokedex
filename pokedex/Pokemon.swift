@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class Pokemon
 {
@@ -40,8 +41,13 @@ class Pokemon
         
     }
     
-    func downloadPokemonDetails()
+    func downloadPokemonDetails(completed: DownloadComplete)
     {
-        
+        let url = NSURL(string: _pokemonUrl)!
+        Alamofire.request(.GET, url).responseJSON
+        { (theResponse: Response<AnyObject, NSError>) -> Void in
+            
+                print(theResponse.debugDescription)
+        }
     }
 }
