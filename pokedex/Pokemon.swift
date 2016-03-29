@@ -20,6 +20,8 @@ class Pokemon
     private var _attack: String!
     private var _defense: String!
     private var _nextEvolutionText: String!
+    private var _nextEvolutionId: String!
+    private var _nextEvolutionLvl: String!
     private var _pokemonUrl: String!
     
     var name: String
@@ -30,6 +32,51 @@ class Pokemon
     var pokedexId: Int
     {
         return _pokedexId
+    }
+    
+    var description: String
+    {
+        return _description
+    }
+    
+    var type: String
+    {
+        return _type
+    }
+    
+    var height: String
+    {
+        return _height
+    }
+    
+    var weight: String
+    {
+        return _weight
+    }
+    
+    var attack: String
+    {
+        return _attack
+    }
+    
+    var defense: String
+    {
+        return _defense
+    }
+    
+    var nextEvolutionText: String
+    {
+        return _nextEvolutionText
+    }
+    
+    var nextEvolutionId: String
+    {
+        return _nextEvolutionId
+    }
+    
+    var nextEvolutionLvl: String
+    {
+        return _nextEvolutionLvl
     }
     
     init(name: String, pokedexId: Int)
