@@ -159,6 +159,41 @@ class Pokemon
                         {
                             self._description = ""
                         }
+                    
+                    if let evolutions = dict["evolutions"] as? [Dictionary<String, AnyObject>] where evolutions.count > 0
+                        {
+                            if let to = evolutions[0]["to"] as? String
+                                {
+                                    //Can't support Mega Pokemon right now
+                                    if to.rangeOfString("mega") == nil
+                                        {
+                                            if let uri = evolutions[0]["resource_uri"] as? String
+                                                {
+                                                    let newStr = uri.stringByReplacingOccurrencesOfString("/api/v1/pokemon/", withString: "")
+                                                    let num = newStr.stringByReplacingOccurrencesOfString("/", withString: "")
+                                                    
+                                                    self._nextEvolutionId = num
+                                                    self._nextEvolutionText = to
+                                                    
+                                                    if let lvl = evolutions[0]["level"] as? Int
+                                                        {
+                                                            self._nextEvolutionLvl = "\(lvl)"
+                                                        }
+                                                    else
+                                                        {
+                                                            if let method = evolutions[0]["method"] as? String
+                                                                {
+                                                                    self._nextEvolutionLvl = method
+                                                                }
+                                                        }
+                                                    
+                                                    print(self._nextEvolutionText)
+                                                    print(self._nextEvolutionId)
+                                                    print(self._nextEvolutionLvl)
+                                                }
+                                        }
+                                }
+                        }
                 
                 }
                 
