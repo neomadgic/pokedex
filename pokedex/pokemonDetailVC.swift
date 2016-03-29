@@ -14,7 +14,7 @@ class pokemonDetailVC: UIViewController
     @IBOutlet weak var pokemonNameLbl: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     @IBOutlet weak var descriptionLbl: UILabel!
-    @IBOutlet weak var typeLbl: UILabel!
+    @IBOutlet weak var typeLbl: TypeLabel!
     @IBOutlet weak var pokedexLbl: UILabel!
     @IBOutlet weak var heightLbl: UILabel!
     @IBOutlet weak var attackLbl: UILabel!
@@ -50,6 +50,7 @@ class pokemonDetailVC: UIViewController
     {
         descriptionLbl.text = pokemon.description
         typeLbl.text = pokemon.type
+        typeLbl.changeColor();
         heightLbl.text = pokemon.height
         attackLbl.text = pokemon.attack
         weightLbl.text = pokemon.weight
