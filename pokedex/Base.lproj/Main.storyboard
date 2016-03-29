@@ -193,14 +193,14 @@
                             <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="oMG-Zd-9GC">
                                 <rect key="frame" x="175" y="480" width="250" height="100"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="167" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-uo-61B">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uTF-uo-61B">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="3iw-lb-1lh"/>
                                             <constraint firstAttribute="height" constant="100" id="53P-UF-6dy"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="157" translatesAutoresizingMaskIntoConstraints="NO" id="dr3-4Y-fj7">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dr3-4Y-fj7">
                                         <rect key="frame" x="150" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="jnt-ho-M4i"/>
@@ -226,7 +226,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="27C-KF-zUX">
                                         <rect key="frame" x="0.0" y="29" width="560" height="122"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="123" translatesAutoresizingMaskIntoConstraints="NO" id="M4z-Xw-xdX">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M4z-Xw-xdX">
                                                 <rect key="frame" x="0.0" y="0.0" width="122" height="122"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="122" id="w0c-ey-fi2"/>
@@ -345,7 +345,7 @@
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aWb-KY-ACk">
                                 <rect key="frame" x="0.0" y="426" width="600" height="37"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Evolution: Venasaur LVL 32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-lC-09c">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Next Evolution: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3M-lC-09c">
                                         <rect key="frame" x="22" y="4" width="557" height="29"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="29" id="xDO-fa-E1v"/>
@@ -382,14 +382,16 @@
                     </view>
                     <connections>
                         <outlet property="attackLbl" destination="Ueg-0C-fuG" id="qFk-46-vSF"/>
+                        <outlet property="currentEvoImg" destination="uTF-uo-61B" id="0fP-Tk-kBo"/>
                         <outlet property="defenseLbl" destination="SxB-9T-cuO" id="MRJ-2a-eXH"/>
                         <outlet property="descriptionLbl" destination="Kaz-6d-PWY" id="l2h-fa-hef"/>
                         <outlet property="evoLbl" destination="Z3M-lC-09c" id="ySk-PP-0uT"/>
                         <outlet property="heightLbl" destination="ahp-Bn-oTj" id="Q7S-Vb-NU0"/>
                         <outlet property="mainImg" destination="M4z-Xw-xdX" id="Rt7-dF-8JA"/>
+                        <outlet property="nextEvoImg" destination="dr3-4Y-fj7" id="xZJ-v8-uLl"/>
                         <outlet property="pokedexLbl" destination="RCF-EE-zZm" id="IUn-Y6-HKb"/>
                         <outlet property="pokemonNameLbl" destination="N2K-tx-heW" id="uxe-Mr-2Ug"/>
-                        <outlet property="typeLbl" destination="buc-v8-BIs" id="UuL-UU-vjD"/>
+                        <outlet property="typeLbl" destination="z5g-eV-Hlx" id="o3k-BE-oOd"/>
                         <outlet property="weightLbl" destination="9PY-pe-3nI" id="ibI-VQ-sEc"/>
                     </connections>
                 </viewController>
@@ -400,8 +402,6 @@
     </scenes>
     <resources>
         <image name="123" width="120" height="120"/>
-        <image name="157" width="96" height="96"/>
-        <image name="167" width="120" height="120"/>
         <image name="back" width="100" height="67"/>
         <image name="bg" width="1920" height="1200"/>
         <image name="music" width="100" height="100"/>

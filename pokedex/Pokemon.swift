@@ -187,7 +187,7 @@ class Pokemon
                                                         }
                                                 }
                                             
-                                            
+                                            completed()
                                         }
                                 }
                         }
